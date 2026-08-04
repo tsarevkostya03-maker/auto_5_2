@@ -11,15 +11,12 @@ public class RegistrationDto {
         this.status = status;
     }
 
-    public String getLogin() {
-        return login;
+    // Конструктор для простых случаев
+    public RegistrationDto(String login, String password) {
+        this(login, password, "active");
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public String getStatus() {
-        return status;
-    }
+    public String getLogin() { return login; }
+    public String getPassword() { return password; }
+    public String getStatus() { return status; }
 }
