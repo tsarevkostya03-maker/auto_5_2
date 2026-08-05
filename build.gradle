@@ -18,10 +18,10 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'com.codeborne:selenide:6.19.1'      // Для UI-тестов
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0' // Для регистрации через API
     testImplementation 'com.google.code.gson:gson:2.10.1'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
 }
 
 test {
