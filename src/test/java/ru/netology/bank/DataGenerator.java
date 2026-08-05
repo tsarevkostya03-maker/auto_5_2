@@ -14,28 +14,11 @@ public class DataGenerator {
         return faker.internet().password(6, 10);
     }
 
-    public static String generateStatus() {
-        return "active";
-    }
-
     public static RegistrationDto generateRandomUser() {
-        return new RegistrationDto(generateLogin(), generatePassword(), generateStatus());
+        return new RegistrationDto(generateLogin(), generatePassword(), "active");
     }
 
-    // Эти методы нужны для обратной совместимости, если старые тесты еще используются
-    public static RegistrationDto createRandomUser() {
-        return generateRandomUser();
-    }
-
-    public static RegistrationDto createRandomUserWithStatus(String status) {
-        return new RegistrationDto(generateLogin(), generatePassword(), status);
-    }
-
-    public static RegistrationDto createUserWithInvalidLogin() {
-        return new RegistrationDto("", generatePassword(), "active");
-    }
-
-    public static RegistrationDto createUserWithInvalidPassword() {
-        return new RegistrationDto(generateLogin(), "", "active");
+    public static RegistrationDto generateBlockedUser() {
+        return new RegistrationDto(generateLogin(), generatePassword(), "blocked");
     }
 }
