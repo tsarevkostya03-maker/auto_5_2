@@ -20,9 +20,9 @@ public class ApiHelper {
         given()
                 .spec(requestSpec)
                 .body(user)
-                .when()
+        .when()
                 .post("/api/system/users")
-                .then()
+        .then()
                 .statusCode(200);
     }
 }
